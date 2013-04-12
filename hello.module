@@ -1,0 +1,11 @@
+<?php 
+//hook_init ()
+function hello_init () {
+  //dsm('1st execution');
+  static $code_run = FALSE; //This is for only one time show up the msg
+
+  if (!$code_run) {drupal_set_message("Hello there");}
+  $code_run = TRUE;
+  
+  }
+  ?>

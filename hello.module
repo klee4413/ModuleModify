@@ -1,10 +1,13 @@
 <?php 
 //hook_init ()
 function hello_init () {
-  //dsm('1st execution');
+  //drupal_set_message("");   //Clear initial message
   static $code_run = FALSE; //This is for only one time show up the msg
 
-  if (!$code_run) {drupal_set_message("Hello there");}
+  //if (!$code_run) {drupal_set_message("Hello there");} 
+  //The above statement display multiple times of message.
+  
+  if (!$code_run) drupal_set_message(t("Hello There!"), 'salute');
   $code_run = TRUE;
   
   }
